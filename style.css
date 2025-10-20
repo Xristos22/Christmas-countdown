@@ -1,0 +1,49 @@
+body {
+  background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  text-align: center;
+  padding-top: 50px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#countdown {
+  font-size: 2em;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🎄 Flickering Lights */
+.lights {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.bulb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: flicker 1s infinite alternate;
+}
+
+.bulb.red { background-color: red; }
+.bulb.green { background-color: green; }
+.bulb.blue { background-color: blue; }
+.bulb.yellow { background-color: gold; }
+
+@keyframes flicker {
+  0% { opacity: 0.3; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+  100% { opacity: 1; box-shadow: 0 0 15px currentColor; }
+}
